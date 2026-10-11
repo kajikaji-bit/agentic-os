@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/env ruby \"${CLAUDE_PLUGIN_ROOT}/hooks/agentic-runtime.rb\" claude",
+            "timeout": 600
+          }
+        ]
+      }
+    ]
+  }
+}

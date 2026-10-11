@@ -1,0 +1,24 @@
+name: management
+description: |
+  タスク管理をするためのワークフロー。依頼があるたびに Mission、Vision、Values、Milestones、TODO リストの更新を行う。
+
+rules:
+  - workspace
+  - management
+  - loop
+
+steps:
+  - name: 01-setup
+    description: |
+      タスクの作業用ディレクトリと Herdr のタブを規約どおりに揃え、Hunk コメントの監視を始める
+    using:
+      - herdr
+      - monitor-hunk-comments
+
+  - name: 02-updating
+    description: |
+      ユーザーからの指示に従って Mission、Vision、Values、Milestones、TODO リストの更新を行う。
+    artifacts:
+      - milestones.md
+      - todo.md
+    approval: required

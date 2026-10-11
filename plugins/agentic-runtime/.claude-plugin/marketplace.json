@@ -1,0 +1,14 @@
+{
+  "name": "kkaji",
+  "description": "ワークフローに従ってタスクをステップごとに進めるランタイムを配る。",
+  "owner": {
+    "name": "Kaji Keisuke",
+    "email": "kyaji.hs.0517@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "agentic-runtime",
+      "source": "./"
+    }
+  ]
+}

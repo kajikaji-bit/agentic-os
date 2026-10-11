@@ -1,0 +1,21 @@
+name: maintenance
+description: |
+  メンテナンスの依頼を繰り返し受けて進める
+
+rules:
+  - workspace
+  - maintenance
+  - loop
+
+steps:
+  - name: 01-setup
+    description: |
+      タスクの作業用ディレクトリと Herdr のタブを規約どおりに揃え、Hunk コメントの監視を始める
+    using:
+      - herdr
+      - monitor-hunk-comments
+
+  - name: 02-maintenance
+    description: |
+      ユーザーからのメンテナンス依頼に応える
+    approval: required
