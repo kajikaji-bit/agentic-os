@@ -1,0 +1,10 @@
+{
+  "name": "agentic-runtime",
+  "description": "一つのタスクを順序付きのステップへ分け、Stop Hooks が次のステップの指示を送って完了まで運ぶ。",
+  "version": "2026.9.11-15f20d2",
+  "author": {
+    "name": "Kaji Keisuke",
+    "email": "kyaji.hs.0517@gmail.com"
+  },
+  "hooks": "./hooks/hooks-cursor.json"
+}

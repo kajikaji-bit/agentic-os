@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "/usr/bin/env ruby \"${PLUGIN_ROOT}/hooks/agentic-runtime.rb\" codex",
+            "timeout": 600,
+            "statusMessage": "Running agentic-runtime stop hook"
+          }
+        ]
+      }
+    ]
+  }
+}

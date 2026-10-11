@@ -1,0 +1,21 @@
+name: inbox
+description: |
+  やりたいことをネクストアクションに繋げる
+
+rules:
+  - workspace
+  - inbox
+  - loop
+
+steps:
+  - name: 01-setup
+    description: |
+      タスクの作業用ディレクトリと Herdr のタブを規約どおりに揃え、Hunk コメントの監視を始める
+    using:
+      - herdr
+      - monitor-hunk-comments
+
+  - name: 02-inbox
+    description: |
+      やりたいことをネクストアクションに繋げる
+    approval: required
